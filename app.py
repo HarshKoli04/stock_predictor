@@ -11,7 +11,7 @@ from sklearn.model_selection import train_test_split
 import plotly.graph_objs as go
 
 
-openai.api_key = "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"
+# openai.api_key = "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"
 
 st.set_page_config(layout="wide")
 
@@ -119,58 +119,58 @@ with st.expander("View 2nd Prediction"):
 #         response = completion.choices[0].text
 #         # print(response)
 #         st.write(response)
-model_engine = "text-davinci-003"
-inp=st.text_input("Enter your doubts here")
-m=st.button("Search",key="3")
-if m:
-    prom=inp+" in 500 words"
+# model_engine = "text-davinci-003"
+# inp=st.text_input("Enter your doubts here")
+# m=st.button("Search",key="3")
+# if m:
+#     prom=inp+" in 500 words"
     
 
-    completion = openai.Completion.create(
-        engine=model_engine,
-        prompt=prom,
-        max_tokens=1024,
-        n=1,
-        stop=None,
-        temperature=0.5,
-    )
+#     completion = openai.Completion.create(
+#         engine=model_engine,
+#         prompt=prom,
+#         max_tokens=1024,
+#         n=1,
+#         stop=None,
+#         temperature=0.5,
+#     )
 
-    response = completion.choices[0].text
-    # print(response)
-    st.write(response)
-    st.write("")
-    st.write("")
-    st.write("")
+#     response = completion.choices[0].text
+#     # print(response)
+#     st.write(response)
+#     st.write("")
+#     st.write("")
+#     st.write("")
 
-promp="history of "+selected_stock+ " in yfinance in 3000 words"
-completion1 = openai.Completion.create(
-        engine=model_engine,
-        prompt=promp,
-        max_tokens=1024,
-        n=1,
-        stop=None,
-        temperature=0.5,
-    )
-st.title("History of "+selected_stock+" :")
-response1 = completion1.choices[0].text
-# print(response)
-st.write(response1)
+# promp="history of "+selected_stock+ " in yfinance in 3000 words"
+# completion1 = openai.Completion.create(
+#         engine=model_engine,
+#         prompt=promp,
+#         max_tokens=1024,
+#         n=1,
+#         stop=None,
+#         temperature=0.5,
+#     )
+# st.title("History of "+selected_stock+" :")
+# response1 = completion1.choices[0].text
+# # print(response)
+# st.write(response1)
 
 
-st.write("")
-st.write("")
-st.write("")
-st.write("")
-promp="should we invest in "+selected_stock+ "  in 1000 words"
-completion1 = openai.Completion.create(
-        engine=model_engine,
-        prompt=promp,
-        max_tokens=1024,
-        n=1,
-        stop=None,
-        temperature=0.5,
-    )
-st.title("Investment in "+selected_stock+" :")
-response2 = completion1.choices[0].text
-# print(response)
-st.write(response2)
+# st.write("")
+# st.write("")
+# st.write("")
+# st.write("")
+# promp="should we invest in "+selected_stock+ "  in 1000 words"
+# completion1 = openai.Completion.create(
+#         engine=model_engine,
+#         prompt=promp,
+#         max_tokens=1024,
+#         n=1,
+#         stop=None,
+#         temperature=0.5,
+#     )
+# st.title("Investment in "+selected_stock+" :")
+# response2 = completion1.choices[0].text
+# # print(response)
+# st.write(response2)
