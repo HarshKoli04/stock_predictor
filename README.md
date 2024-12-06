@@ -18,7 +18,7 @@
 
 ![image](https://github.com/user-attachments/assets/4078187f-bc88-462c-b3bc-201266b6d081)
 
-## we have used to predictive models DescisionTree and LinearRegression for Prediction:
+## we have used two predictive models DescisionTree and LinearRegression for Prediction:
 It also tells the day before to buy the stock to bear less occurrence of loss
 ### 1.Descision tree:
 
